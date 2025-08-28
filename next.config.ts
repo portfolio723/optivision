@@ -1,8 +1,10 @@
 import type {NextConfig} from 'next';
 
+const isDev = process.env.npm_lifecycle_event === 'dev';
+
 const nextConfig: NextConfig = {
   /* config options here */
-  output: 'export',
+  output: isDev ? undefined : 'export',
   typescript: {
     ignoreBuildErrors: true,
   },
