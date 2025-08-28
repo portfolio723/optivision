@@ -4,7 +4,13 @@ import { products } from '@/lib/products';
 export default function SunglassesPage() {
     const sunglassesProducts = products.filter(p => p.category === 'Sunglasses');
   return (
-    <div className="space-y-12">
+    <div className="space-y-8">
+       <div className="text-center">
+        <h1 className="text-4xl font-bold font-headline">Sunglasses Collection</h1>
+        <p className="text-lg text-muted-foreground mt-2 font-accent">
+          Protect your eyes in style with our trendy and durable sunglasses.
+        </p>
+      </div>
       <ProductSection products={sunglassesProducts} />
     </div>
   );
