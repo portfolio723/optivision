@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
+export default async function ProductPage({ params }: ProductPageProps) {
   const product = products.find(p => p.id.toString() === params.id);
 
   if (!product) {
