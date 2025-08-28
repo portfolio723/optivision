@@ -4,8 +4,9 @@ export interface Product {
   price: number;
   imageUrl: string;
   brand: string;
-  frameStyle: 'Rectangle' | 'Round' | 'Cat-Eye' | 'Aviator';
-  lensType: 'Single Vision' | 'Bifocal' | 'Progressive';
+  category: 'Men' | 'Women' | 'Lenses' | 'Sunglasses';
+  frameStyle: 'Rectangle' | 'Round' | 'Cat-Eye' | 'Aviator' | 'Rimless' | 'Sport';
+  lensType: 'Single Vision' | 'Bifocal' | 'Progressive' | 'Daily' | 'Monthly';
   faceShape: 'Oval' | 'Round' | 'Square' | 'Heart';
   style: 'Casual' | 'Luxury' | 'Professional' | 'Sport';
   description: string;

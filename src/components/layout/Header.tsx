@@ -9,10 +9,10 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const navLinks = [
-  { href: '#', label: 'Men' },
-  { href: '#', label: 'Women' },
-  { href: '#', label: 'Lenses' },
-  { href: '#', label: 'Sunglasses' },
+  { href: '/men', label: 'Men' },
+  { href: '/women', label: 'Women' },
+  { href: '/lenses', label: 'Lenses' },
+  { href: '/sunglasses', label: 'Sunglasses' },
   { href: '#', label: 'Virtual Try-On' },
 ];
 
