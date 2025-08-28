@@ -12,7 +12,7 @@ export default function MenPage() {
           Discover our collection of stylish and durable glasses for men.
         </p>
       </div>
-      <ProductSection products={menProducts} />
+      <ProductSection allProducts={products} categoryProducts={menProducts} />
     </div>
   );
 }

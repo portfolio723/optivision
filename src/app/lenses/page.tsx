@@ -11,7 +11,7 @@ export default function LensesPage() {
           Find comfortable and high-quality contact lenses for your vision needs.
         </p>
       </div>
-      <ProductSection products={lensesProducts} />
+      <ProductSection allProducts={products} categoryProducts={lensesProducts} />
     </div>
   );
 }

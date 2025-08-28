@@ -11,7 +11,7 @@ export default function SunglassesPage() {
           Protect your eyes in style with our trendy and durable sunglasses.
         </p>
       </div>
-      <ProductSection products={sunglassesProducts} />
+      <ProductSection allProducts={products} categoryProducts={sunglassesProducts} />
     </div>
   );
 }

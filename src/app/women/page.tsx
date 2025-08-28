@@ -12,7 +12,7 @@ export default function WomenPage() {
           Explore elegant and fashionable frames designed for women.
         </p>
       </div>
-      <ProductSection products={womenProducts} />
+      <ProductSection allProducts={products} categoryProducts={womenProducts} />
     </div>
   );
 }
