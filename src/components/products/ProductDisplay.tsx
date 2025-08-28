@@ -9,8 +9,16 @@ interface ProductDisplayProps {
   products: Product[];
 }
 
+type Filters = {
+  brands: string[];
+  frameStyles: string[];
+  faceShapes: string[];
+  styles: string[];
+  priceRange: [number, number];
+};
+
 export default function ProductDisplay({ products }: ProductDisplayProps) {
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<Filters>({
     brands: [],
     frameStyles: [],
     faceShapes: [],

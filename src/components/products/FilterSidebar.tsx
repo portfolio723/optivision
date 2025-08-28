@@ -26,10 +26,14 @@ const allStyles = ['Casual', 'Luxury', 'Professional', 'Sport'];
 
 export default function FilterSidebar({ filters, setFilters }: FilterSidebarProps) {
   const handleCheckedChange = (category: keyof Omit<Filters, 'priceRange'>, value: string, checked: boolean) => {
-    setFilters(prev => ({
-      ...prev,
-      [category]: checked ? [...prev[category], value] : prev[category].filter(v => v !== value),
-    }));
+    setFilters(prev => {
+      const list = prev[category] as string[];
+      const newList = checked ? [...list, value] : list.filter(v => v !== value);
+      return {
+        ...prev,
+        [category]: newList,
+      };
+    });
   };
 
   return (

@@ -8,7 +8,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+interface ProductPageProps {
+  params: { id: string };
+}
+
+export default function ProductPage({ params }: ProductPageProps) {
   const product = products.find(p => p.id.toString() === params.id);
 
   if (!product) {
