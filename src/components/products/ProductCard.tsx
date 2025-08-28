@@ -26,7 +26,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="overflow-hidden flex flex-col group shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg">
+    <Card className="overflow-hidden flex flex-col group shadow-md hover:shadow-xl transition-all duration-300 rounded-lg hover:-translate-y-1">
       <CardHeader className="p-0">
         <Link href={`/product/${product.id}`} className="block relative aspect-square">
             <Image

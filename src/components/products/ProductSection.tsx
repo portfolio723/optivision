@@ -14,6 +14,7 @@ export default function ProductSection({ products, searchQuery = '' }: ProductSe
     brands: [],
     frameStyles: [],
     faceShapes: [],
+    styles: [],
     priceRange: [0, 25000] as [number, number],
   });
 
@@ -31,7 +32,7 @@ export default function ProductSection({ products, searchQuery = '' }: ProductSe
       }
       
       // Sidebar filters
-      const { brands, frameStyles, faceShapes, priceRange } = filters;
+      const { brands, frameStyles, faceShapes, styles, priceRange } = filters;
       const [minPrice, maxPrice] = priceRange;
 
       if (brands.length > 0 && !brands.includes(product.brand)) {
@@ -41,6 +42,9 @@ export default function ProductSection({ products, searchQuery = '' }: ProductSe
         return false;
       }
       if (faceShapes.length > 0 && !faceShapes.includes(product.faceShape)) {
+        return false;
+      }
+      if (styles.length > 0 && !styles.includes(product.style)) {
         return false;
       }
       if (product.price < minPrice || product.price > maxPrice) {

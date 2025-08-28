@@ -10,6 +10,7 @@ type Filters = {
   brands: string[];
   frameStyles: string[];
   faceShapes: string[];
+  styles: string[];
   priceRange: [number, number];
 };
 
@@ -21,6 +22,7 @@ interface FilterSidebarProps {
 const allBrands = ['Ray-Ban', 'Oakley', 'Warby Parker', 'Prada'];
 const allFrameStyles = ['Rectangle', 'Round', 'Cat-Eye', 'Aviator'];
 const allFaceShapes = ['Oval', 'Round', 'Square', 'Heart'];
+const allStyles = ['Casual', 'Luxury', 'Professional', 'Sport'];
 
 export default function FilterSidebar({ filters, setFilters }: FilterSidebarProps) {
   const handleCheckedChange = (category: keyof Omit<Filters, 'priceRange'>, value: string, checked: boolean) => {
@@ -33,7 +35,7 @@ export default function FilterSidebar({ filters, setFilters }: FilterSidebarProp
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold font-headline">Filters</h2>
-      <Accordion type="multiple" defaultValue={['price', 'brands', 'frameStyles', 'faceShapes']} className="w-full">
+      <Accordion type="multiple" defaultValue={['price', 'brands', 'frameStyles', 'faceShapes', 'styles']} className="w-full">
         <AccordionItem value="price">
           <AccordionTrigger className="text-lg font-semibold">Price Range</AccordionTrigger>
           <AccordionContent className="pt-4">
@@ -87,6 +89,19 @@ export default function FilterSidebar({ filters, setFilters }: FilterSidebarProp
             ))}
           </AccordionContent>
         </AccordionItem>
+
+        <AccordionItem value="styles">
+          <AccordionTrigger className="text-lg font-semibold">Style</AccordionTrigger>
+          <AccordionContent className="space-y-2 pt-2">
+            {allStyles.map(style => (
+              <div key={style} className="flex items-center space-x-2">
+                <Checkbox id={`style-cat-${style}`} onCheckedChange={(checked) => handleCheckedChange('styles', style, !!checked)} checked={filters.styles.includes(style)} />
+                <Label htmlFor={`style-cat-${style}`}>{style}</Label>
+              </div>
+            ))}
+          </AccordionContent>
+        </AccordionItem>
+
       </Accordion>
     </div>
   );

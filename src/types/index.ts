@@ -7,6 +7,7 @@ export interface Product {
   frameStyle: 'Rectangle' | 'Round' | 'Cat-Eye' | 'Aviator';
   lensType: 'Single Vision' | 'Bifocal' | 'Progressive';
   faceShape: 'Oval' | 'Round' | 'Square' | 'Heart';
+  style: 'Casual' | 'Luxury' | 'Professional' | 'Sport';
   description: string;
   rating: number;
   reviews: number;
