@@ -46,7 +46,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className="text-sm text-muted-foreground">{product.brand}</p>
       </CardContent>
       <CardFooter className="p-4 flex justify-between items-center">
-        <p className="text-lg font-bold">${product.price.toFixed(2)}</p>
+        <p className="text-lg font-bold">₹{product.price.toFixed(2)}</p>
         <Button variant="outline" size="icon" onClick={handleAddToCart}>
           <ShoppingCart className="h-5 w-5" />
           <span className="sr-only">Add to cart</span>

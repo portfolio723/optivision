@@ -1,12 +1,13 @@
 'use client';
 
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger, SheetFooter } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetFooter } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart, Trash2 } from 'lucide-react';
 import { useCart } from '@/context/CartProvider';
 import Image from 'next/image';
 import { Separator } from '../ui/separator';
 import Link from 'next/link';
+import { DialogTitle } from '@radix-ui/react-dialog';
 
 export function CartSheet() {
   const { cart, removeFromCart, updateQuantity } = useCart();
@@ -28,7 +29,7 @@ export function CartSheet() {
       <SheetContent className="flex flex-col">
         <SheetHeader>
           <SheetTitle className="font-headline">Shopping Cart</SheetTitle>
-          <SheetDescription>Review your items before checkout.</SheetDescription>
+          <DialogTitle className="sr-only">Shopping Cart</DialogTitle>
         </SheetHeader>
         <div className="flex-grow overflow-y-auto -mx-6 px-6">
           {cart.length === 0 ? (
@@ -44,7 +45,7 @@ export function CartSheet() {
                   </div>
                   <div className="flex-grow">
                     <p className="font-semibold">{item.name}</p>
-                    <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>
+                    <p className="text-sm text-muted-foreground">₹{item.price.toFixed(2)}</p>
                     <div className="flex items-center gap-2 mt-2">
                       <Button variant="outline" size="icon" className="h-6 w-6" onClick={() => updateQuantity(item.id, item.quantity - 1)} disabled={item.quantity <= 1}>-</Button>
                       <span>{item.quantity}</span>
@@ -52,7 +53,7 @@ export function CartSheet() {
                     </div>
                   </div>
                   <div className="flex flex-col items-end gap-2">
-                    <p className="font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
+                    <p className="font-semibold">₹{(item.price * item.quantity).toFixed(2)}</p>
                     <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground" onClick={() => removeFromCart(item.id)}>
                       <Trash2 className="h-4 w-4" />
                       <span className="sr-only">Remove item</span>
@@ -68,7 +69,7 @@ export function CartSheet() {
             <div className="w-full space-y-4">
               <div className="flex justify-between font-semibold">
                 <span>Subtotal</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>₹{subtotal.toFixed(2)}</span>
               </div>
               <Button size="lg" className="w-full as-child" asChild>
                 <Link href="/checkout">Proceed to Checkout</Link>

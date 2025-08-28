@@ -3,9 +3,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Badge } from '@/components/ui/badge';
 
 const mockOrders = [
-  { id: 'ORD001', date: '2023-10-26', status: 'Delivered', total: 149.99 },
-  { id: 'ORD002', date: '2023-10-20', status: 'Delivered', total: 89.50 },
-  { id: 'ORD003', date: '2023-09-15', status: 'Delivered', total: 210.00 },
+  { id: 'ORD001', date: '2023-10-26', status: 'Delivered', total: 11999 },
+  { id: 'ORD002', date: '2023-10-20', status: 'Delivered', total: 7160 },
+  { id: 'ORD003', date: '2023-09-15', status: 'Delivered', total: 16800 },
 ];
 
 export default function AccountPage() {
@@ -20,7 +20,7 @@ export default function AccountPage() {
               <CardDescription>Manage your personal information.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
-                <p className="font-semibold">Fashion-Forward Priya</p>
+                <p className="font-semibold">Priya Sharma</p>
                 <p className="text-muted-foreground">priya@example.com</p>
             </CardContent>
           </Card>
@@ -49,7 +49,7 @@ export default function AccountPage() {
                       <TableCell>
                         <Badge variant={order.status === 'Delivered' ? 'default' : 'secondary'} className="bg-green-600 text-white">{order.status}</Badge>
                       </TableCell>
-                      <TableCell className="text-right">${order.total.toFixed(2)}</TableCell>
+                      <TableCell className="text-right">₹{order.total.toFixed(2)}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

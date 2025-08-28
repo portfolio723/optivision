@@ -102,7 +102,7 @@ export default function AIStyleAdvisor() {
                     <Image src={recommendation.imageUrl} alt={recommendation.name} fill style={{objectFit: 'cover'}} sizes="300px"/>
                 </div>
                 <h4 className="font-bold">{recommendation.name}</h4>
-                <p className="text-muted-foreground">${recommendation.price.toFixed(2)}</p>
+                <p className="text-muted-foreground">₹{recommendation.price.toFixed(2)}</p>
                 <Button asChild className="mt-4 w-full" onClick={() => handleOpenChange(false)}>
                     <Link href={`/product/${recommendation.id}`}>View Product</Link>
                 </Button>

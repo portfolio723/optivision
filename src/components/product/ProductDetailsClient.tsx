@@ -42,7 +42,7 @@ export default function ProductDetailsClient({ product }: { product: Product }) 
         <div>
           <h1 className="text-3xl lg:text-4xl font-bold font-headline">{product.name}</h1>
           <p className="text-lg text-muted-foreground">{product.brand}</p>
-          <p className="text-3xl font-bold mt-2">${product.price.toFixed(2)}</p>
+          <p className="text-3xl font-bold mt-2">₹{product.price.toFixed(2)}</p>
         </div>
         <p className="text-muted-foreground">{product.description}</p>
         <Separator />

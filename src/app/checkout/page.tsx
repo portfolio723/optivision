@@ -15,7 +15,7 @@ export default function CheckoutPage() {
   const router = useRouter();
 
   const subtotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const shipping = 5.0;
+  const shipping = 150.0;
   const total = subtotal + shipping;
 
   const handlePlaceOrder = (e: React.FormEvent) => {
@@ -41,25 +41,25 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="first-name">First Name</Label>
-                    <Input id="first-name" placeholder="John" required />
+                    <Input id="first-name" placeholder="Amit" required />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="last-name">Last Name</Label>
-                    <Input id="last-name" placeholder="Doe" required />
+                    <Input id="last-name" placeholder="Kumar" required />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="address">Address</Label>
-                  <Input id="address" placeholder="123 Vision St" required />
+                  <Input id="address" placeholder="123, Vision Street" required />
                 </div>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="space-y-2 col-span-2">
                     <Label htmlFor="city">City</Label>
-                    <Input id="city" placeholder="New York" required />
+                    <Input id="city" placeholder="Mumbai" required />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="zip">ZIP Code</Label>
-                    <Input id="zip" placeholder="10001" required />
+                    <Label htmlFor="zip">PIN Code</Label>
+                    <Input id="zip" placeholder="400001" required />
                   </div>
                 </div>
               </CardContent>
@@ -71,12 +71,12 @@ export default function CheckoutPage() {
                 <CardDescription>Select your preferred payment method.</CardDescription>
               </CardHeader>
               <CardContent>
-                <RadioGroup defaultValue="card" className="grid gap-4">
+                <RadioGroup defaultValue="upi" className="grid grid-cols-3 gap-4">
                   <div>
                     <RadioGroupItem value="card" id="card" className="peer sr-only" />
                     <Label htmlFor="card" className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary">
                       <CreditCard className="mb-3 h-6 w-6" />
-                      Stripe / Card
+                      Card
                     </Label>
                   </div>
                   <div>
@@ -112,22 +112,22 @@ export default function CheckoutPage() {
                         <p className="text-sm text-muted-foreground">Qty: {item.quantity}</p>
                       </div>
                     </div>
-                    <p>${(item.price * item.quantity).toFixed(2)}</p>
+                    <p>₹{(item.price * item.quantity).toFixed(2)}</p>
                   </div>
                 ))}
                 <Separator />
                 <div className="flex justify-between">
                   <p>Subtotal</p>
-                  <p>${subtotal.toFixed(2)}</p>
+                  <p>₹{subtotal.toFixed(2)}</p>
                 </div>
                 <div className="flex justify-between">
                   <p>Shipping</p>
-                  <p>${shipping.toFixed(2)}</p>
+                  <p>₹{shipping.toFixed(2)}</p>
                 </div>
                 <Separator />
                 <div className="flex justify-between font-bold text-lg">
                   <p>Total</p>
-                  <p>${total.toFixed(2)}</p>
+                  <p>₹{total.toFixed(2)}</p>
                 </div>
               </CardContent>
             </Card>

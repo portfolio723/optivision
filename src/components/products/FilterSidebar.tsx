@@ -39,14 +39,14 @@ export default function FilterSidebar({ filters, setFilters }: FilterSidebarProp
           <AccordionContent className="pt-4">
             <div className="space-y-4">
               <Slider
-                defaultValue={[0, 500]}
-                max={500}
-                step={10}
+                defaultValue={[0, 25000]}
+                max={25000}
+                step={500}
                 onValueChange={(value: [number, number]) => setFilters(prev => ({...prev, priceRange: value}))}
               />
               <div className="flex justify-between text-sm text-muted-foreground">
-                <span>${filters.priceRange[0]}</span>
-                <span>${filters.priceRange[1]}</span>
+                <span>₹{filters.priceRange[0]}</span>
+                <span>₹{filters.priceRange[1]}</span>
               </div>
             </div>
           </AccordionContent>

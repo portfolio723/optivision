@@ -4,7 +4,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: "Classic Wayfarer",
-    price: 150.00,
+    price: 12000.00,
     imageUrl: "https://picsum.photos/id/10/600/600",
     brand: "Ray-Ban",
     frameStyle: "Rectangle",
@@ -15,7 +15,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Modern Aviator",
-    price: 175.50,
+    price: 14040.00,
     imageUrl: "https://picsum.photos/id/20/600/600",
     brand: "Oakley",
     frameStyle: "Aviator",
@@ -26,7 +26,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Hipster Round",
-    price: 120.00,
+    price: 9600.00,
     imageUrl: "https://picsum.photos/id/30/600/600",
     brand: "Warby Parker",
     frameStyle: "Round",
@@ -37,7 +37,7 @@ export const products: Product[] = [
   {
     id: 4,
     name: "Sleek Cateye",
-    price: 210.00,
+    price: 16800.00,
     imageUrl: "https://picsum.photos/id/40/600/600",
     brand: "Prada",
     frameStyle: "Cat-Eye",
@@ -48,7 +48,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Urban Explorer",
-    price: 160.00,
+    price: 12800.00,
     imageUrl: "https://picsum.photos/id/50/600/600",
     brand: "Oakley",
     frameStyle: "Rectangle",
@@ -59,7 +59,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Minimalist Metal",
-    price: 135.00,
+    price: 10800.00,
     imageUrl: "https://picsum.photos/id/60/600/600",
     brand: "Warby Parker",
     frameStyle: "Round",
@@ -70,7 +70,7 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Bold Acetate",
-    price: 180.00,
+    price: 14400.00,
     imageUrl: "https://picsum.photos/id/70/600/600",
     brand: "Ray-Ban",
     frameStyle: "Rectangle",
@@ -81,7 +81,7 @@ export const products: Product[] = [
   {
     id: 8,
     name: "Vintage Pilot",
-    price: 195.00,
+    price: 15600.00,
     imageUrl: "https://picsum.photos/id/80/600/600",
     brand: "Prada",
     frameStyle: "Aviator",
@@ -92,7 +92,7 @@ export const products: Product[] = [
   {
     id: 9,
     name: "Scholarly Spectacles",
-    price: 110.00,
+    price: 8800.00,
     imageUrl: "https://picsum.photos/id/90/600/600",
     brand: "Warby Parker",
     frameStyle: "Round",
@@ -103,7 +103,7 @@ export const products: Product[] = [
   {
     id: 10,
     name: "Executive Frame",
-    price: 250.00,
+    price: 20000.00,
     imageUrl: "https://picsum.photos/id/100/600/600",
     brand: "Prada",
     frameStyle: "Rectangle",
@@ -114,7 +114,7 @@ export const products: Product[] = [
   {
     id: 11,
     name: "Retro Glam Cateye",
-    price: 185.00,
+    price: 14800.00,
     imageUrl: "https://picsum.photos/id/110/600/600",
     brand: "Ray-Ban",
     frameStyle: "Cat-Eye",
@@ -125,7 +125,7 @@ export const products: Product[] = [
   {
     id: 12,
     name: "Sport Performance",
-    price: 220.00,
+    price: 17600.00,
     imageUrl: "https://picsum.photos/id/120/600/600",
     brand: "Oakley",
     frameStyle: "Rectangle",

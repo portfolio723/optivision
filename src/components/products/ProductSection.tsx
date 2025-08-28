@@ -13,7 +13,7 @@ export default function ProductSection({ products }: ProductSectionProps) {
     brands: [],
     frameStyles: [],
     faceShapes: [],
-    priceRange: [0, 500] as [number, number],
+    priceRange: [0, 25000] as [number, number],
   });
 
   const filteredProducts = useMemo(() => {
