@@ -5,6 +5,8 @@ import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Eye, Menu, Search, User } from 'lucide-react';
 import { CartSheet } from '../cart/CartSheet';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const navLinks = [
   { href: '#', label: 'Men' },
@@ -15,6 +17,30 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
+
+  // Update URL when search query changes
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams);
+    if (searchQuery) {
+      params.set('q', searchQuery);
+    } else {
+      params.delete('q');
+    }
+    // We only want search on the homepage for now
+    if (pathname === '/') {
+      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    }
+  }, [searchQuery, router, pathname, searchParams]);
+  
+  // Sync state with URL params on navigation
+  useEffect(() => {
+    setSearchQuery(searchParams.get('q') || '');
+  }, [searchParams]);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +80,13 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <div className="relative hidden md:block">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input type="search" placeholder="Search..." className="pl-8 sm:w-[200px] lg:w-[300px] bg-background" />
+              <Input 
+                type="search" 
+                placeholder="Search products..." 
+                className="pl-8 sm:w-[200px] lg:w-[300px] bg-background"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
             </div>
 
             <Link href="/login" aria-label="Account">

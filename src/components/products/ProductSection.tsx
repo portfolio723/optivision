@@ -6,9 +6,10 @@ import ProductGrid from './ProductGrid';
 
 interface ProductSectionProps {
   products: Product[];
+  searchQuery?: string;
 }
 
-export default function ProductSection({ products }: ProductSectionProps) {
+export default function ProductSection({ products, searchQuery = '' }: ProductSectionProps) {
   const [filters, setFilters] = useState({
     brands: [],
     frameStyles: [],
@@ -17,7 +18,19 @@ export default function ProductSection({ products }: ProductSectionProps) {
   });
 
   const filteredProducts = useMemo(() => {
+    const lowercasedQuery = searchQuery.toLowerCase();
+
     return products.filter(product => {
+      // Search filter
+      if (searchQuery) {
+        const inName = product.name.toLowerCase().includes(lowercasedQuery);
+        const inBrand = product.brand.toLowerCase().includes(lowercasedQuery);
+        if (!inName && !inBrand) {
+          return false;
+        }
+      }
+      
+      // Sidebar filters
       const { brands, frameStyles, faceShapes, priceRange } = filters;
       const [minPrice, maxPrice] = priceRange;
 
@@ -35,7 +48,7 @@ export default function ProductSection({ products }: ProductSectionProps) {
       }
       return true;
     });
-  }, [products, filters]);
+  }, [products, filters, searchQuery]);
 
   return (
     <div className="grid lg:grid-cols-4 gap-8">
