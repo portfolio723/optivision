@@ -1,32 +1,18 @@
-import type {NextConfig} from 'next';
-
-const isDev = process.env.npm_lifecycle_event === 'dev';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: isDev ? undefined : 'export',
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  output: 'export',
+  trailingSlash: true,
+  basePath: '/optivision',
+  assetPrefix: '/optivision/',
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+  },
+  typescript: {
+    ignoreBuildErrors: false, // Fix errors instead of ignoring
+  },
+  eslint: {
+    ignoreDuringBuilds: false, // Fix warnings instead of ignoring
   },
 };
 
