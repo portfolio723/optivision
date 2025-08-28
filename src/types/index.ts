@@ -8,6 +8,8 @@ export interface Product {
   lensType: 'Single Vision' | 'Bifocal' | 'Progressive';
   faceShape: 'Oval' | 'Round' | 'Square' | 'Heart';
   description: string;
+  rating: number;
+  reviews: number;
 }
 
 export interface CartItem extends Product {

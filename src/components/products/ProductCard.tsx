@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { useCart } from '@/context/CartProvider';
 import { useToast } from '@/hooks/use-toast';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Star } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -26,7 +26,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <Card className="overflow-hidden flex flex-col group">
+    <Card className="overflow-hidden flex flex-col group shadow-md hover:shadow-xl transition-shadow duration-300 rounded-lg">
       <CardHeader className="p-0">
         <Link href={`/product/${product.id}`} className="block relative aspect-square">
             <Image
@@ -35,18 +35,26 @@ export default function ProductCard({ product }: ProductCardProps) {
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-              data-ai-hint="eyeglasses product"
+              data-ai-hint="stylish eyeglasses"
             />
         </Link>
       </CardHeader>
       <CardContent className="p-4 flex-grow">
-        <CardTitle className="text-lg font-semibold font-headline leading-tight mb-1">
+        <p className="text-sm text-muted-foreground font-accent">{product.brand}</p>
+        <CardTitle className="text-lg font-semibold font-headline leading-tight mb-2">
           <Link href={`/product/${product.id}`}>{product.name}</Link>
         </CardTitle>
-        <p className="text-sm text-muted-foreground">{product.brand}</p>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center text-primary">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className={`h-4 w-4 ${i < Math.floor(product.rating) ? 'fill-current' : 'fill-transparent stroke-current'}`} />
+            ))}
+          </div>
+          <span className="text-xs text-muted-foreground font-accent">({product.reviews} reviews)</span>
+        </div>
       </CardContent>
       <CardFooter className="p-4 flex justify-between items-center">
-        <p className="text-lg font-bold">₹{product.price.toFixed(2)}</p>
+        <p className="text-xl font-bold font-headline">₹{product.price.toFixed(2)}</p>
         <Button variant="outline" size="icon" onClick={handleAddToCart}>
           <ShoppingCart className="h-5 w-5" />
           <span className="sr-only">Add to cart</span>

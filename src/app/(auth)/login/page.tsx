@@ -11,7 +11,7 @@ export default function LoginPage() {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="text-2xl font-headline">Login</CardTitle>
-        <CardDescription>Enter your email below to login to your account.</CardDescription>
+        <CardDescription className="font-accent">Enter your email below to login to your account.</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         <div className="grid grid-cols-2 gap-6">
@@ -27,7 +27,7 @@ export default function LoginPage() {
             <span className="w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-card px-2 text-muted-foreground">Or continue with</span>
+            <span className="bg-card px-2 text-muted-foreground font-accent">Or continue with</span>
           </div>
         </div>
         <div className="grid gap-2">
@@ -41,7 +41,7 @@ export default function LoginPage() {
       </CardContent>
       <CardFooter className="flex flex-col gap-4">
         <Button className="w-full">Sign in</Button>
-        <div className="text-center text-sm">
+        <div className="text-center text-sm font-accent">
           Don&apos;t have an account?{' '}
           <Link href="/signup" className="underline">
             Sign up
