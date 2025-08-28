@@ -1,0 +1,136 @@
+import type { Product } from "@/types";
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: "Classic Wayfarer",
+    price: 150.00,
+    imageUrl: "https://picsum.photos/id/10/600/600",
+    brand: "Ray-Ban",
+    frameStyle: "Rectangle",
+    lensType: "Single Vision",
+    faceShape: "Oval",
+    description: "Iconic and timeless, the Classic Wayfarer is a staple for any wardrobe. Made with high-quality acetate for durability and comfort."
+  },
+  {
+    id: 2,
+    name: "Modern Aviator",
+    price: 175.50,
+    imageUrl: "https://picsum.photos/id/20/600/600",
+    brand: "Oakley",
+    frameStyle: "Aviator",
+    lensType: "Progressive",
+    faceShape: "Square",
+    description: "A modern take on a classic design. These aviators feature lightweight metal frames and advanced lens technology for superior clarity."
+  },
+  {
+    id: 3,
+    name: "Hipster Round",
+    price: 120.00,
+    imageUrl: "https://picsum.photos/id/30/600/600",
+    brand: "Warby Parker",
+    frameStyle: "Round",
+    lensType: "Single Vision",
+    faceShape: "Heart",
+    description: "Embrace a vintage vibe with these stylish round frames. Perfect for making a statement while ensuring all-day comfort."
+  },
+  {
+    id: 4,
+    name: "Sleek Cateye",
+    price: 210.00,
+    imageUrl: "https://picsum.photos/id/40/600/600",
+    brand: "Prada",
+    frameStyle: "Cat-Eye",
+    lensType: "Bifocal",
+    faceShape: "Round",
+    description: "Elegant and sophisticated, these cateye glasses add a touch of glamour to any look. Crafted with premium materials for a luxurious feel."
+  },
+  {
+    id: 5,
+    name: "Urban Explorer",
+    price: 160.00,
+    imageUrl: "https://picsum.photos/id/50/600/600",
+    brand: "Oakley",
+    frameStyle: "Rectangle",
+    lensType: "Progressive",
+    faceShape: "Oval",
+    description: "Built for the urban adventurer, these frames are both durable and stylish. They provide a comfortable fit for long days on the go."
+  },
+  {
+    id: 6,
+    name: "Minimalist Metal",
+    price: 135.00,
+    imageUrl: "https://picsum.photos/id/60/600/600",
+    brand: "Warby Parker",
+    frameStyle: "Round",
+    lensType: "Single Vision",
+    faceShape: "Square",
+    description: "Lightweight and minimalist, these metal frames offer a subtle yet sophisticated look. Ideal for those who prefer understated elegance."
+  },
+  {
+    id: 7,
+    name: "Bold Acetate",
+    price: 180.00,
+    imageUrl: "https://picsum.photos/id/70/600/600",
+    brand: "Ray-Ban",
+    frameStyle: "Rectangle",
+    lensType: "Bifocal",
+    faceShape: "Round",
+    description: "Make a bold statement with these thick acetate frames. Designed for those who aren't afraid to stand out from the crowd."
+  },
+  {
+    id: 8,
+    name: "Vintage Pilot",
+    price: 195.00,
+    imageUrl: "https://picsum.photos/id/80/600/600",
+    brand: "Prada",
+    frameStyle: "Aviator",
+    lensType: "Progressive",
+    faceShape: "Heart",
+    description: "A throwback to classic pilot style, these frames combine vintage aesthetics with modern craftsmanship for a timeless appeal."
+  },
+  {
+    id: 9,
+    name: "Scholarly Spectacles",
+    price: 110.00,
+    imageUrl: "https://picsum.photos/id/90/600/600",
+    brand: "Warby Parker",
+    frameStyle: "Round",
+    lensType: "Single Vision",
+    faceShape: "Oval",
+    description: "Channel your inner intellectual with these scholarly round glasses. A perfect blend of classic style and modern comfort."
+  },
+  {
+    id: 10,
+    name: "Executive Frame",
+    price: 250.00,
+    imageUrl: "https://picsum.photos/id/100/600/600",
+    brand: "Prada",
+    frameStyle: "Rectangle",
+    lensType: "Bifocal",
+    faceShape: "Square",
+    description: "Command the boardroom with these powerful and professional executive frames. Sleek design meets high-performance materials."
+  },
+  {
+    id: 11,
+    name: "Retro Glam Cateye",
+    price: 185.00,
+    imageUrl: "https://picsum.photos/id/110/600/600",
+    brand: "Ray-Ban",
+    frameStyle: "Cat-Eye",
+    lensType: "Single Vision",
+    faceShape: "Heart",
+    description: "A touch of retro glamour. These cateye frames are perfect for adding a playful yet chic element to your style."
+  },
+  {
+    id: 12,
+    name: "Sport Performance",
+    price: 220.00,
+    imageUrl: "https://picsum.photos/id/120/600/600",
+    brand: "Oakley",
+    frameStyle: "Rectangle",
+    lensType: "Progressive",
+    faceShape: "Round",
+    description: "Engineered for athletes, these sport performance glasses offer unparalleled durability, comfort, and optical clarity."
+  },
+];
