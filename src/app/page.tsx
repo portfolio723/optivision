@@ -1,15 +1,25 @@
 import Hero from '@/components/Hero';
-import ProductSection from '@/components/products/ProductSection';
 import { products } from '@/lib/products';
-import VirtualTryOn from '@/components/VirtualTryOn';
 import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
+
+const ProductSection = dynamic(() => import('@/components/products/ProductSection'), {
+  suspense: true,
+});
+const VirtualTryOn = dynamic(() => import('@/components/VirtualTryOn'), {
+  suspense: true,
+});
 
 function HomePageContent() {
   return (
     <div className="space-y-12">
       <Hero />
-      <ProductSection allProducts={products} />
-      <VirtualTryOn />
+      <Suspense fallback={<div>Loading products...</div>}>
+        <ProductSection allProducts={products} />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <VirtualTryOn />
+      </Suspense>
     </div>
   );
 }
