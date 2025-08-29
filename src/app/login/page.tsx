@@ -43,7 +43,7 @@ export default function LoginPage() {
         <Button className="w-full">Sign in</Button>
         <div className="text-center text-sm font-accent">
           Don&apos;t have an account?{' '}
-          <Link href="/signup" className="underline">
+          <Link href="/optivision/signup" className="underline">
             Sign up
           </Link>
         </div>
