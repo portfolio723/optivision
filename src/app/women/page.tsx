@@ -1,7 +1,8 @@
 import ProductSection from '@/components/products/ProductSection';
 import { products } from '@/lib/products';
+import { Suspense } from 'react';
 
-export default function WomenPage() {
+function WomenPageContent() {
   const womenProducts = products.filter(p => p.category === 'Women');
 
   return (
@@ -14,5 +15,13 @@ export default function WomenPage() {
       </div>
       <ProductSection allProducts={products} categoryProducts={womenProducts} />
     </div>
+  );
+}
+
+export default function WomenPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <WomenPageContent />
+    </Suspense>
   );
 }
