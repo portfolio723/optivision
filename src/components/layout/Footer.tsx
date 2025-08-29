@@ -19,8 +19,8 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold font-headline mb-4">Shop</h3>
             <ul className="space-y-2">
-              <li><Link href="/men" className="text-muted-foreground hover:text-primary">Men&apos;s Glasses</Link></li>
-              <li><Link href="/women" className="text-muted-foreground hover:text-primary">Women&apos;s Glasses</Link></li>
+              <li><Link href="/men" className="text-muted-foreground hover:text-primary">Men's Glasses</Link></li>
+              <li><Link href="/women" className="text-muted-foreground hover:text-primary">Women's Glasses</Link></li>
               <li><Link href="/lenses" className="text-muted-foreground hover:text-primary">Contact Lenses</Link></li>
               <li><Link href="/sunglasses" className="text-muted-foreground hover:text-primary">Sunglasses</Link></li>
             </ul>

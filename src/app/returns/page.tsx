@@ -13,7 +13,7 @@ export default function ReturnsPage() {
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">
-            At OptiVision, your satisfaction is our priority. If you&apos;re not 100% happy with your purchase, you can return or exchange it within 30 days of receipt. We aim to make the process as simple as possible.
+            At OptiVision, your satisfaction is our priority. If you're not 100% happy with your purchase, you can return or exchange it within 30 days of receipt. We aim to make the process as simple as possible.
           </p>
         </CardContent>
       </Card>
@@ -28,7 +28,7 @@ export default function ReturnsPage() {
             <CardTitle className="font-headline text-lg">1. Start a Request</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground text-sm">Log in to your account, go to &apos;Order History&apos;, and select the order you wish to return. Click the &apos;Request Return&apos; button.</p>
+            <p className="text-muted-foreground text-sm">Log in to your account, go to 'Order History', and select the order you wish to return. Click the 'Request Return' button.</p>
           </CardContent>
         </Card>
          <Card>
@@ -40,7 +40,7 @@ export default function ReturnsPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground text-sm">Securely pack the item in its original packaging. Make sure to include all accessories and documentation.</p>
-          </d_iv>
+          </CardContent>
         </Card>
          <Card>
           <CardHeader>
