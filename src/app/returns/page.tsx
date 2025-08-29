@@ -40,7 +40,7 @@ export default function ReturnsPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground text-sm">Securely pack the item in its original packaging. Make sure to include all accessories and documentation.</p>
-          </CardContent>
+          </d_iv>
         </Card>
          <Card>
           <CardHeader>
