@@ -35,9 +35,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
-      # Temporarily remove typecheck to isolate build issues
-      # - name: Run type checking
-      #   run: npm run typecheck
+      - name: Run type checking
+        run: npm run typecheck
         
       - name: Run linting
         run: npm run lint --fix
