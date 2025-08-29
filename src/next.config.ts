@@ -2,16 +2,14 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  trailingSlash: true,
-  basePath: '/optivision',
   images: {
     unoptimized: true,
   },
   typescript: {
-    ignoreBuildErrors: true, // Temporarily ignore to unblock deployment
+    ignoreBuildErrors: false,
   },
   eslint: {
-    ignoreDuringBuilds: true, // Temporarily ignore to unblock deployment
+    ignoreDuringBuilds: false,
   },
 };
 
