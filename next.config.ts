@@ -3,8 +3,6 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/optivision',
-  assetPrefix: '/optivision/',
   images: {
     unoptimized: true,
   },
