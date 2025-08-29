@@ -1,11 +1,8 @@
 import Hero from '@/components/Hero';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
+import ProductSectionClient from '@/components/ProductSectionClient';
 
-const ProductSection = dynamic(() => import('@/components/products/ProductSection'), {
-  ssr: false,
-  loading: () => <div>Loading products...</div>
-});
 const VirtualTryOn = dynamic(() => import('@/components/VirtualTryOn'));
 
 export default function Home() {
@@ -13,7 +10,7 @@ export default function Home() {
     <div className="space-y-12">
       <Hero />
       <Suspense fallback={<div>Loading products...</div>}>
-        <ProductSection allProducts={[]} />
+        <ProductSectionClient />
       </Suspense>
       <Suspense fallback={<div>Loading...</div>}>
         <VirtualTryOn />
