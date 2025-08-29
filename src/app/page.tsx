@@ -6,7 +6,7 @@ import ProductSection from '@/components/products/ProductSection';
 
 const VirtualTryOn = dynamic(() => import('@/components/VirtualTryOn'));
 
-function HomePageContent() {
+export default function Home() {
   return (
     <div className="space-y-12">
       <Hero />
@@ -15,13 +15,5 @@ function HomePageContent() {
         <VirtualTryOn />
       </Suspense>
     </div>
-  );
-}
-
-export default function Home() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <HomePageContent />
-    </Suspense>
   );
 }
