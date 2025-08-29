@@ -3,12 +3,8 @@ import { products } from '@/lib/products';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
-const ProductSection = dynamic(() => import('@/components/products/ProductSection'), {
-  suspense: true,
-});
-const VirtualTryOn = dynamic(() => import('@/components/VirtualTryOn'), {
-  suspense: true,
-});
+const ProductSection = dynamic(() => import('@/components/products/ProductSection'));
+const VirtualTryOn = dynamic(() => import('@/components/VirtualTryOn'));
 
 function HomePageContent() {
   return (
