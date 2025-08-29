@@ -35,6 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`light ${playfairDisplay.variable} ${inter.variable} ${lato.variable}`}>
+      <head>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+      </head>
       <body>
         <CartProvider>
           <div className="flex flex-col min-h-screen">
