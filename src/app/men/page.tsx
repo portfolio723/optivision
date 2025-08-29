@@ -1,3 +1,4 @@
+'use client';
 import ProductSection from '@/components/products/ProductSection';
 import { products } from '@/lib/products';
 import { Suspense } from 'react';
