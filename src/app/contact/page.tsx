@@ -30,7 +30,6 @@ export default function ContactPage() {
           <Card>
             <CardHeader>
               <CardTitle className="font-headline">Send us a Message</CardTitle>
-              <CardDescription>We'll respond within 24 hours.</CardDescription>
             </CardHeader>
             <CardContent>
               <form className="space-y-4">

@@ -11,7 +11,7 @@ export default function LoginPage() {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="text-2xl font-headline">Login</CardTitle>
-        <CardDescription className="font-accent">Enter your email below to login to your account.</CardDescription>
+
       </CardHeader>
       <CardContent className="grid gap-4">
         <div className="grid grid-cols-2 gap-6">
@@ -43,7 +43,7 @@ export default function LoginPage() {
         <Button className="w-full">Sign in</Button>
         <div className="text-center text-sm font-accent">
           Don&apos;t have an account?{' '}
-          <Link href="/optivision/signup" className="underline">
+          <Link href="/signup" className="underline">
             Sign up
           </Link>
         </div>

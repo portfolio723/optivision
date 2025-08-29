@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`light ${playfairDisplay.variable} ${inter.variable} ${lato.variable}`}>
-      <body className="font-body antialiased">
+      <body>
         <CartProvider>
           <div className="flex flex-col min-h-screen">
             <Header />

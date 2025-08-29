@@ -9,7 +9,6 @@ export default function SignupPage() {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="text-xl font-headline">Sign Up</CardTitle>
-        <CardDescription>Enter your information to create an account</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid gap-4">
@@ -45,7 +44,7 @@ export default function SignupPage() {
         </div>
         <div className="mt-4 text-center text-sm">
           Already have an account?{' '}
-          <Link href="/optivision/login" className="underline">
+          <Link href="/login" className="underline">
             Sign in
           </Link>
         </div>
